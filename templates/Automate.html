@@ -1,0 +1,50 @@
+{% extends 'Auto_base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-8 col-lg-11 ">
+
+                    <form class="contact-form" action="{% url 'automate' %}" method="post">
+                        {% csrf_token %}
+
+                        <div class="form-row">
+
+                            <div class="col form-group">
+                                <input type="text" class="form-control" placeholder="Email" name="email">
+                            </div>
+                            <div class="col form-group">
+                                <input type="password" class="form-control" placeholder="Encrypted Password" name="password_entered">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name" name="Entered_Name" >
+                        </div>
+                        <div class="form-group">
+                            <input name="subject_msg" id="" rows="1" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <input name="dear_msg" id="" rows="1" class="form-control" placeholder="Dear example">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="" cols="30" rows="5" class="form-control" placeholder="Your Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="ending" id="" cols="30" rows="2" class="form-control" placeholder="Sincerely..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary btn-block" value="Send Message" >
+                        </div>
+                    </form>
+                </div>
+                {% if name %}
+                <center>
+                    <h1>send Mail successfully from  {{email}}</h1>
+                </center>
+                {% else %}
+                {% endif %}
+            </div>
+{% endblock %}

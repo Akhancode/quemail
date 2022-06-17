@@ -1,0 +1,415 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<header id="home" class="header">
+        <div class="overlay"></div>
+
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="container">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="carousel-title">We Make<br> Your Life Easy </h1>
+                            <button class="btn btn-primary btn-rounded">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 class="carousel-title">We Help <br> To Automate Mail  </h1>
+                            <button class="btn btn-primary btn-rounded">Learn More</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="infos container mb-4 mb-md-2">
+            <div class="title">
+                <h6 class="subtitle font-weight-normal">Navigate to Automate</h6>
+                <h5>Automate mail</h5>
+                <p class="font-small">Make your Excel file in specific Format</p>
+            </div>
+            <div class="socials text-right">
+                <div class="row justify-content-between">
+                    <div class="col">
+                        <a class="d-block subtitle"><i class="ti-microphone pr-2"></i> (971) 5432-59639</a>
+                        <a class="d-block subtitle"><i class="ti-email pr-2"></i> akhan.crpt@gmail.com</a>
+                    </div>
+                    <div class="col">
+                        <h6 class="subtitle font-weight-normal mb-2">Social Media</h6>
+                        <div class="social-links">
+                            <a href="javascript:void(0)" class="link pr-1"><i class="ti-facebook"></i></a>
+                            <a href="javascript:void(0)" class="link pr-1"><i class="ti-twitter-alt"></i></a>
+                            <a href="javascript:void(0)" class="link pr-1"><i class="ti-google"></i></a>
+                            <a href="javascript:void(0)" class="link pr-1"><i class="ti-pinterest-alt"></i></a>
+                            <a href="javascript:void(0)" class="link pr-1"><i class="ti-instagram"></i></a>
+                            <a href="javascript:void(0)" class="link pr-1"><i class="ti-rss"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+            <section class="section" id="testmonial">
+        <div class="container">
+            <h6 class="xs-font mb-0">Follow this step</h6>
+            <h3 class="section-title">Instruction.</h3>
+            <hr/>
+            <Data>
+            <div id="owl-testmonial" class="owl-carousel owl-theme mt-4">
+
+                <div class="item">
+                     <div class="blog-wrapper">
+                        <div class="txt-wrapper">
+                            <h6>Step 1</h6>
+                            <h4 class="blog-title">Create your excel</h4>
+                            <p>
+                                Open Excel file , create new blank workbook in excel.
+                                Enter "EMAIL" in first cell A1 of your workbook as Heading of list
+                                of email . And then the variable heading to B1 as shown as example .
+                                And second variable to C1 both variables in example entered as "COMPANY" & "POSITION".
+                                Save it .
+                            </p>
+
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="{% static 'imgs/excel.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="item">
+                     <div class="blog-wrapper">
+                        <div class="txt-wrapper">
+                            <h6>Step 2</h6>
+                            <h4 class="blog-title">Navigate to Automate</h4>
+                            <p>
+                                Open Excel file , create new blank workbook in excel.
+                                Enter "EMAIL" in first cell A1 of your workbook as Heading of list
+                                of email . And then the variable heading to B1 as shown as example .
+                                And second variable to C1 both variables in example entered as "COMPANY" & "POSITION".
+                                Save it .
+                            </p>
+
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="{% static 'imgs/Automate.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="item">
+                     <div class="blog-wrapper">
+                        <div class="txt-wrapper">
+                            <h6>Step 3</h6>
+                            <h4 class="blog-title">Enable 2 step Verification</h4>
+                            <p>
+                                Search Google for "App Password",
+                                Open link which starts "support.google.com"
+                                Enable 2 step verification.
+                                set up App password .
+
+                            </p>
+
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="{% static 'imgs/App_password.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="item">
+                     <div class="blog-wrapper">
+                        <div class="txt-wrapper">
+                            <h6>Step 4</h6>
+                            <h4 class="blog-title">Setup App password</h4>
+                            <p>
+                                Select the app as "MAIL" and choose your device
+                                and continue on clicking Generate .
+                                copy the Encrypted Password . Save it in your confidential file.
+                                Beware do not reveal your password to Anyone
+                            </p>
+
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="{% static 'imgs/App_password_2.jpg' %}" alt="Image Not Loading">
+                        </div>
+
+                    </div>
+
+                </div>
+                 <div class="item">
+                     <div class="blog-wrapper">
+                        <div class="txt-wrapper">
+                            <h6>Step 5</h6>
+                            <h4 class="blog-title">Choose Type and Fill Form</h4>
+                            <p>
+                                There are multipe type provided by MailQ.
+                                Single,One Bulk,Custom Bulk.
+                                If you choose Single type it is normal mailing system ,
+                                choosing One Bulk helps to send mail Automatically on fetching ,
+                                Data from Excel file.
+                            </p>
+
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="{% static 'imgs/fill_form.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="item">
+                     <div class="blog-wrapper">
+                        <div class="txt-wrapper">
+                            <h6>Step 6</h6>
+                            <h4 class="blog-title">Enter content and customise it </h4>
+                            <p>
+                                Enter content and customise it by <strong>$variable_1</strong>,<strong>$variable_2</strong> accordingly
+                                it will replace with the data which is specific to it .<br>
+                                You will get output as :<br> "This is message which was sending to <strong>Sentinal</strong> for the position of <strong>Accountant</strong>"
+                            </p>
+
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="{% static 'imgs/customise_message.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        </div>
+
+                    </div>
+
+                </div>
+                 <div class="item">
+                     <div class="blog-wrapper">
+                        <div class="txt-wrapper">
+                            <h6>Step 6</h6>
+                            <h4 class="blog-title">Process excel File</h4>
+                            <p>
+                                After filling the form ,You need choose the Excel file
+                                that saved before . Make Sure Excel file is in same format as instructed.
+                            </p>
+
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="{% static 'imgs/Excel_process.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        </div>
+
+                    </div>
+
+                </div>
+                 <div class="item">
+                     <div class="blog-wrapper">
+                        <div class="txt-wrapper">
+                            <h6>Step 7</h6>
+                            <h4 class="blog-title">Send Message </h4>
+                            <p>
+                             Check the details displayed and confirm before sending
+                                Send message .
+                            </p>
+
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="{% static 'imgs/Excel_process.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            </Data>
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="container">
+            <h6 class="xs-font mb-0">Upcoming projects</h6>
+            <h3 class="section-title mb-4">Our Products</h3>
+
+            <div class="row text-center">
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="card border-0 text-dark">
+                        <img class="card-img-top" src="{% static 'imgs/Bitcoin price tracker.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        <span class="card-body">
+                            <h5 class="title mt-4">Price Tracker App</h5>
+                            <p class="xs-font">Shows the live price of crypto currency .<br> Android App</p>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="card border-0 text-dark">
+                        <img class="card-img-top" src="{% static 'imgs/mailQ_software.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        <span class="card-body">
+                            <h5 class="title mt-4">Mail Software </h5>
+                            <p class="xs-font">MailQ software - with classic Tkinder UI.</p>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="card border-0 text-dark">
+                        <img class="card-img-top" src="{% static 'imgs/moneymanagment web app.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        <span class="card-body">
+                            <h5 class="title mt-4">Money Managment Web App</h5>
+                            <p class="xs-font">A simple stake supervising web app .</p>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!--    <section class="section" id="portfolio">-->
+<!--        <div class="container">-->
+<!--            <h6 class="xs-font mb-0">Culpa perferendis excepturi.</h6>-->
+<!--            <h3 class="section-title pb-4">Our Products</h3>-->
+<!--        </div>-->
+
+<!--        <div id="owl-portfolio" class="owl-carousel owl-theme mt-4">-->
+<!--            <a href="javascript:void(0)" class="item expertises-item">-->
+<!--                <img src="{% static 'imgs/img-1.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page" class="box-shadow">-->
+<!--                <h6 class="mt-3 mb-2">Fuga asperiores</h6>-->
+<!--                <p class="xs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--            </a>-->
+<!--            <a href="javascript:void(0)" class="item expertises-item">-->
+<!--                <img src="{% static 'imgs/img-2.jpg' %}"alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page" class="box-shadow">-->
+<!--                <h6 class="mt-3 mb-2">Voluptatibus iure!</h6>-->
+<!--                <p class="xs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--            </a>-->
+<!--            <a href="javascript:void(0)" class="item expertises-item">-->
+<!--                <img src="{% static 'imgs/img-3.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page" class="box-shadow">-->
+<!--                <h6 class="mt-3 mb-2">Autem minus animi</h6>-->
+<!--                <p class="xs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--            </a>-->
+<!--            <a href="javascript:void(0)" class="item expertises-item">-->
+<!--                <img src="{% static 'imgs/img-4.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page" class="box-shadow">-->
+<!--                <h6 class="mt-3 mb-2">Sed eligendi</h6>-->
+<!--                <p class="xs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--            </a>-->
+<!--            <a href="javascript:void(0)" class="item expertises-item">-->
+<!--                <img src="{% static 'imgs/img-8.jpg' %}"alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page" class="box-shadow">-->
+<!--                <h6 class="mt-3 mb-2">Totam eveniet assumenda!</h6>-->
+<!--                <p class="xs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--            </a>-->
+<!--            <a href="javascript:void(0)" class="item expertises-item">-->
+<!--                <img src="{% static 'imgs/img-9.jpg' %}"alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page" class="box-shadow">-->
+<!--                <h6 class="mt-3 mb-2">Sapiente dolore ut</h6>-->
+<!--                <p class="xs-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </section>-->
+
+
+
+
+
+<!--    <section class="section" id="blog">-->
+
+<!--        <div class="container mb-3">-->
+<!--            <h6 class="xs-font mb-0">Culpa perferendis excepturi.</h6>-->
+<!--            <h3 class="section-title mb-5">Our Blog</h3>-->
+
+<!--            <div class="blog-wrapper">-->
+<!--                <div class="img-wrapper">-->
+<!--                    <img src="{% static 'imgs/img-3.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">-->
+<!--                    <div class="date-container">-->
+<!--                        <h6 class="day">29</h6>-->
+<!--                        <h6 class="mun">Jun</h6>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="txt-wrapper">-->
+<!--                    <h4 class="blog-title">Lorem ipsum dolor.</h4>-->
+<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum vitae ducimus dolor sed numquam, assumenda non dolorem in facilis eius alias voluptates, fugit maiores aspernatur ad rem saepe molestiae consequuntur. adipisicing elit. Repellat nam placeat laboriosam dolorum aperiam fuga voluptate, quis ea vel ab sunt incidunt quasi, molestias atque deserunt voluptates quae voluptatum sit.</p>-->
+
+<!--                    <a href="#" class="badge badge-info">Graphic Design</a>-->
+
+<!--                    <h6 class="blog-footer">-->
+<!--                        <a href="javascript:void(0)"><i class="ti-user"></i> Admin </a> |-->
+<!--                        <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 213 </a> |-->
+<!--                        <a href="javascript:void(0)"><i class="ti-comments"></i> 123</a>-->
+<!--                    </h6>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+ <section class  ="section" id="about">
+
+    <div class="container">
+
+            <div class="row align-items-center mr-auto">
+                <div class="col-md-4">
+                    <h3 class="section-title">About Us</h3>
+                    <p>
+                        An individual who loves to create ,
+                        and looking for new projects to complete.
+                        Any replies are welcome
+                    </p>
+
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-5" style="color:grey">
+                    <h4>
+                        <i>
+                            `` Just because you can automate something, it doesn’t follow that it should be automated. ``
+                        </i>
+                    </h4>
+                </div>
+             </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="section pb-10">
+
+    <div class="container">
+            <h3 class="section-title mb-0">Contact Us</h3>
+            <br>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-8 col-lg-7 pb-10">
+
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="col form-group">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="Your Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary btn-block" value="Send Message">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 d-none d-md-block order-1">
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6>CONTACT INFO</h6>
+                        </li>
+                        <li class="list-body">
+                            <p class="py-2">Contact us </p>
+                            <p class="py-2"><i class="ti-location-pin"></i> Dubai,UAE</p>
+                            <p class="py-2"><i class="ti-email"></i>  akhan.crpt@gmail.com</p>
+                            <p class="py-2"><i class="ti-microphone"></i> +971 5432-59639</p>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <br>
+        <br>
+        <br>
+
+
+{% endblock %}

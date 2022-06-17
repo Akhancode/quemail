@@ -1,0 +1,321 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Ollie landing page.">
+    <meta name="author" content="Devcrud">
+    <title>MailQ</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.theme.default.css' %}">
+
+    <!-- Bootstrap + Ollie main styles -->
+	<link rel="stylesheet" href="{% static 'css/ollie.css' %}">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <nav id="scrollspy" class="navbar navbar-light bg-light navbar-expand-lg fixed-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="/"><a class="carousel-title" style="font-size:200%" href="/">MailQ</a></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ml-0 ml-lg-4">
+                        <a class="nav-link btn btn-primary" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="contact" class="section pb-0">
+    <br>
+    <br>
+    <br>
+        <br>
+           <center>
+            <p>
+                {{alert}}
+            </p>
+        </center>
+        <br/>
+
+
+    <div class="container"  >
+
+          <div class="rows" style="border-style:none;width:100%">
+              <div class="column_half" style="margin-left: 7%; padding-left:10px;width:65%">
+                 <div style="border-style:none">
+                     <div  class="container">
+            <div class="row col-md-8 col-lg-11" style="justify-content:space-between">
+
+                    <h3 class="section-title mb-0 ml-0">Automate - Mail</h3>
+                <div>
+                                    {% if type == "One_bulk" %}
+                                        <div class="dropdown d-inline-block show">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownVariableButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
+                                               Variable
+                                            </button>
+
+
+                                                <script>
+
+                                                       function displayVarSelector(x) {
+                                                            var elem = document.getElementById("variable_data");
+
+                                                            if (elem){
+                                                                    elem.parentNode.removeChild(elem);
+                                                                }
+                                                            if (x==1) {
+
+                                                            document.getElementById("dropdownVariableButton").innerHTML = "One";
+                                                            console.log("documne")
+
+
+                                                              var newdiv = document.createElement('div');
+                                                                newdiv.id = "variable_data";
+                                                                newdiv.innerHTML = "<div class='col form-group'><input form='excel_form' type='text' class='form-control' placeholder='Variable 1' name='variable_1' > </div><br>";
+                                                                document.getElementById('variabe_row').appendChild(newdiv);
+
+
+
+                                                            }
+
+                                                            else if (x==2) {
+                                                            document.getElementById("dropdownVariableButton").innerHTML = "Two";
+
+
+                                                            var newdiv = document.createElement('div');
+                                                                newdiv.id = "variable_data";
+                                                                newdiv.innerHTML = "<div class='form-row form-group'>"+
+                                                                "<div class='col form-group'>"+
+                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 1' name='variable_1'>"+
+                                                                "</div>"+
+                                                                "<div class='col form-group'>"+
+                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 2' name='variable_2'>"+
+                                                                "</div>"+
+                                                                "</div>"
+                                                                document.getElementById('variabe_row').appendChild(newdiv);
+
+
+                                                            }
+                                                            else if (x==3) {
+                                                            document.getElementById("dropdownVariableButton").innerHTML = "Three";
+                                                            var newdiv = document.createElement('div');
+                                                                newdiv.id = "variable_data";
+                                                                newdiv.innerHTML = "<div class='form-row form-group'>"+
+                                                                "<div class='col form-group'>"+
+                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 1' name='variable_1'>"+
+                                                                "</div>"+
+                                                                "<div class='col form-group'>"+
+                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 2' name='variable_2'>"+
+                                                                "</div>"+
+                                                                "<div class='col form-group'>"+
+                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 3' name='variable_3'>"+
+                                                                "</div>"+
+                                                                "</div>"
+                                                                document.getElementById('variabe_row').appendChild(newdiv);
+                                                            }
+                                                            else {
+                                                            document.getElementById("dropdownVariableButton").innerHTML = "Variable";
+                                                            }
+                                                        }
+                                                    </script>
+                                             <div class="dropdown-menu " aria-labelledby="dropdownVariableButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+
+                                                     <button class="dropdown-item" type="submit" name="variable"  href="#" value="One" onclick="displayVarSelector(1)">One</button>
+                                                     <button class="dropdown-item" type="submit" name="variable" href="#" value="Two" onclick="displayVarSelector(2)">Two</button>
+                                                     <button class="dropdown-item" type="submit" name="variable" href="#" value="Three" onclick="displayVarSelector(3)">Three</button>
+
+                                             </div>
+
+                                 </div>
+                                    {% else %}
+                                    {% endif %}
+                                <div class="dropdown d-inline-block show">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
+                                      {{type}}
+                                    </button>
+                                    <script>
+                                           function displayRadioValue(x) {
+                                                if (x==1) {
+                                                document.getElementById("dropdownVariButton").innerHTML = "Single";
+                                                }
+
+                                                else if (x==2) {
+                                                document.getElementById("dropdownMenuButton").innerHTML = "One Bulk";
+                                                {% url 'one_bulk' %}
+                                                }
+                                                else {
+                                                document.getElementById("dropdownMenuButton").innerHTML = "Custom Bulk";
+                                                }
+                                            }
+                                        </script>
+                                 <div class="dropdown-menu " aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+                                         <a class="dropdown-item" type="radio" name="gender" href="Automate.html" value="Single" onclick="displayRadioValue(1)">Single</a>
+                                         <a class="dropdown-item" type="radio" name="gender" href="{% url 'one_bulk' %}" value="One Bulk" onclick="displayRadioValue(2)">One Bulk</a>
+                                         <a class="dropdown-item" type="radio" name="gender" href="#" value="Custom Bulk" onclick="displayRadioValue(3)">Custom Bulk</a>
+
+                                 </div>
+
+                                 </div>
+                </div>
+            </div>
+        </div>
+            <div>
+
+            </div>
+            </br>
+
+
+{% block content %}
+
+{% endblock %}
+          <br/>
+            <br/>
+            <br/>
+            </div>
+              </div>
+              <div class="col" style="border-style:none;width:20%;margin-left: 7%" id="Excel_processed_display">
+                  {% if excel_name %}
+                            <div class="container">
+                      <h3>
+                          {{var_count}} Variables
+                      </h3>
+                      {% if var_count == 2 %}
+                          <table>
+                          <tr>
+                              <th style="padding: 15px;text-decoration: underline;"><h5>{{var_1_column}}</h5></th>&nbsp;
+                              <th style="padding: 15px;text-decoration: underline;"><h5>{{var_2_column}}</h5></th>
+                              <th style="padding: 15px;text-decoration: underline;"><h5>EMAILS</h5></th>
+                          </tr>
+
+
+                          {% for var_1,var2, email in mylist %}
+                            <tr>
+                                <td style="padding: 10px;"><strong>{{var_1}}</strong></td>
+                                <td style="padding: 10px;"><strong>{{var2}}</strong></td>
+                                &nbsp;
+                                <td style="padding: 10px;">{{email}}</td>
+                            </tr>
+                           {% endfor %}
+
+                      </table>
+                          {% elif var_count == 1 %}
+                          <table>
+                          <tr>
+                              <th style="padding: 15px;text-decoration: underline;"><h5>Company</h5></th>&nbsp;
+                              <th style="padding: 15px;text-decoration: underline;"><h5>Emails</h5></th>
+                          </tr>
+
+
+                          {% for var_1,email in mylist %}
+                            <tr>
+                                <td style="padding: 10px;"><strong>{{var_1}}</strong></td>
+                                &nbsp;
+                                <td style="padding: 10px;">{{email}}</td>
+                            </tr>
+                           {% endfor %}
+
+                      </table>
+                          {% elif var_count == 0 %}
+                          <table>
+                          <tr>
+                              <th style="padding: 15px;text-decoration: underline;"><h5>Emails</h5></th>
+                          </tr>
+                          {% for email in mylist %}
+                            <tr>
+                                <td style="padding: 10px;">{{email}}</td>
+                            </tr>
+                           {% endfor %}
+
+                      </table>
+                           {% elif var_count == 3 %}
+                           <table>
+                          <tr>
+                              <th style="padding: 15px;"><h5>{{var_1_column}}</h5><p>$var_1</p></th>&nbsp;
+                              <th style="padding: 15px;"><h5>{{var_2_column}}</h5><p>$var_2</p></th>&nbsp;
+                              <th style="padding: 15px;"><h5>{{var_3_column}}</h5><p>$var_3</p></th>&nbsp;
+                              <th style="padding: 15px;"><h5>Emails</h5><br><p></p></th>
+                          </tr>
+
+
+                          {% for var_1,var_2,var_3,email in mylist %}
+                            <tr>
+                                <td style="padding: 10px;"><strong>{{var_1}}</strong></td>
+                                &nbsp;
+                                <td style="padding: 10px;"><strong>{{var_2}}</strong></td>
+                                &nbsp;
+                                <td style="padding: 10px;"><strong>{{var_3}}</strong></td>
+                                &nbsp;
+                                <td style="padding: 10px;">{{email}}</td>
+                            </tr>
+                           {% endfor %}
+
+                      </table>
+
+                          {% endif %}
+
+
+
+                        </div>
+
+                  </div>
+
+                {% else %}
+                {% endif %}
+
+              </div>
+        </div>
+
+            <footer class="footer mt-5 border-top">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-6 text-center text-md-left">
+                        <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a target="_blank" href="http://www.devcrud.com">Akhan </a></p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-right">
+                        <div class="social-links">
+                            <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
+                            <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
+                            <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+                            <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
+                            <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
+                            <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+	<!-- core  -->
+    <script src="{% static 'vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="{% static 'vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- Owl carousel  -->
+    <script src="{% static 'vendors/owl-carousel/js/owl.carousel.js' %}"></script>
+
+
+    <!-- Ollie js -->
+    <script src="{% static 'js/Ollie.js' %}"></script>
+
+</body>
+</html>
