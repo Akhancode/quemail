@@ -204,7 +204,7 @@ def Excel_Process(request):
                     "var_count": var_count
 
                 })
-            if columns == 1 : # Two variable
+            elif columns == 1 : # Two variable
                 print("enterto def function")
                 str_match = list(filter(lambda x: 'EMAI'or'email'or'Email' in x, column_names))
                 email_col = str_match[0]
@@ -377,6 +377,7 @@ def Excel_Process(request):
                 'name': "ajish",
                 'type': 'One_bulk',
                 'excel_name': 'Excel',
+                'alert':'😁',
 
             })
     except Exception as e:

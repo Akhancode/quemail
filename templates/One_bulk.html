@@ -31,16 +31,16 @@
                         </script>
 
                         <div class="form-group">
-                            <input form="excel_form" name="subject_msg" id="" rows="1" class="form-control" placeholder="Subject" value={{entered_subject}}>
+                            <input form="excel_form" name="subject_msg" id="x1" rows="1" class="form-control" placeholder="Subject" value={{entered_subject}}>
                         </div>
                         <div class="form-group">
-                            <input form="excel_form" name="dear_msg" id="" rows="1" class="form-control" placeholder="Dear example" value={{entered_dear}}>
+                            <input form="excel_form" name="dear_msg" id="x2" rows="1" class="form-control" placeholder="Dear example" value={{entered_dear}}>
                         </div>
                         <div class="form-group">
-                            <textarea form="excel_form" name="message" id="" cols="30" rows="5" class="form-control" placeholder="Your Message ( write $variable_1 to replace column 2 value )" >{{entered_message}}</textarea>
+                            <textarea form="excel_form" name="message" id="x3" cols="30" rows="5" class="form-control" placeholder="Your Message ( write $variable_1 to replace column 2 value )" >{{entered_message}}</textarea>
                         </div>
                         <div class="form-group">
-                            <textarea form="excel_form" name="ending" id="" cols="30" rows="2" class="form-control" placeholder="Sincerely..." >{{entered_ending}}</textarea>
+                            <textarea form="excel_form" name="ending" id="x4" cols="30" rows="2" class="form-control" placeholder="Sincerely..." >{{entered_ending}}</textarea>
                         </div>
 
 
@@ -51,7 +51,7 @@
 
                                             <div>
 <!--                                          <input type="file" name="myfile" class="form-control" >-->
-                                                 <input form="excel_form" type="file" name="Myfile" <br>
+                                                 <input form="excel_form" type="file" name="Myfile"> <br>
 <!--                                                <input form="excel_form" type="submit" value="Save Data">-->
 
 <!--                                                <input type="file" name="Myfile" ><br>-->
@@ -65,7 +65,7 @@
 
 
                                         <div>
-                                          <a form="excel_form" type="submit" class="btn btn-danger">Process</a>
+                                          <button form="excel_form" type="submit" class="btn btn-danger">Process</button>
                                         </div>
                               {% endif %}
 
