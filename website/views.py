@@ -1,13 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.core.mail import send_mail,EmailMessage,send_mass_mail
 import pandas as pd
-from django.conf import settings
-import smtplib
-from email.message import EmailMessage
-from django.core.files.storage import FileSystemStorage
-# from webapp import settings
-# Create your views here.
 entered_name = None;
 entered_email=None;
 entered_password=None;
