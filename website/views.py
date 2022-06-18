@@ -398,7 +398,11 @@ def Excel_Process(request):
         else:
             print("0000000000000000")
             print(str(e) + "this is the errorllllllllllllllllllllllllllllllllllllll")
-
+            return render(request, 'One_bulk.html', {
+                'email': entered_email,
+                'type': 'One_bulk',
+                'alert': str(e)
+            })
 
 # def multiple_upload(request):
 #     if request.method == "POST":
