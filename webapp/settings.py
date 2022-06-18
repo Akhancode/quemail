@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
-
+import django_heroku
+import dj_database_url
+from decouple import config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -50,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'webapp.urls'
@@ -122,18 +125,18 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_ROOT =os.path.join(BASE_DIR,'assets')
 
 # Test version of mail
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'amjadkhantm02@gmail.com'
-# EMAIL_HOST_PASSWORD = 'wuojkbbybvnqvtbe'
 EMAIL_HOST_USER = None
 EMAIL_HOST_PASSWORD = None
 EMAIL_USE_TLS = True
 
+django_heroku.settings(locals())
 print("gooooooooooooooooooooooooood")
 # print(EMAIL_HOST_USER)
 
