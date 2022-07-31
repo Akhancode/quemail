@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.theme.default.css' %}">
+
+    <!-- Bootstrap + Ollie main styles -->
+	<link rel="stylesheet" href="{% static 'css/ollie.css' %}">
+    <title>Instruction</title>
+
+</head>
+<body>
+   <nav id="scrollspy" class="navbar navbar-light bg-light navbar-expand-lg fixed-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="/"><a class="carousel-title" style="font-size:200%" href="/">MailQ</a></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Steps.html">Instruction</a>
+                    </li>
+                    <li class="nav-item ml-0 ml-lg-4">
+                        <a class="nav-link btn btn-primary" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ <section class="section">
+        <div class="container">
+            <h6 class="xs-font mb-0">Upcoming projects</h6>
+            <h3 class="section-title mb-4">Our Products</h3>
+
+            <div class="row text-center">
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="card border-0 text-dark">
+                        <img class="card-img-top" src="{% static 'imgs/Bitcoin price tracker.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        <span class="card-body">
+                            <h5 class="title mt-4">Price Tracker App</h5>
+                            <p class="xs-font">Shows the live price of crypto currency .<br> Android App</p>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="card border-0 text-dark">
+                        <img class="card-img-top" src="{% static 'imgs/mailQ_software.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        <span class="card-body">
+                            <h5 class="title mt-4">Mail Software </h5>
+                            <p class="xs-font">MailQ software - with classic Tkinder UI.</p>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="card border-0 text-dark">
+                        <img class="card-img-top" src="{% static 'imgs/moneymanagment web app.jpg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                        <span class="card-body">
+                            <h5 class="title mt-4">Money Managment Web App</h5>
+                            <p class="xs-font">A simple stake supervising web app .</p>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>

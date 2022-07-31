@@ -204,7 +204,11 @@ def Excel_Process(request):
                     "var_count": var_count
 
                 })
+<<<<<<< HEAD
             elif columns == 1 : # Two variable
+=======
+            elif columns == 1 : # One variable
+>>>>>>> origin/main
                 print("enterto def function")
                 str_match = list(filter(lambda x: 'EMAI'or'email'or'Email' in x, column_names))
                 email_col = str_match[0]
@@ -261,7 +265,7 @@ def Excel_Process(request):
                 print("datatuple", dataTuple)
 
                 mylist = zip(var_1,var_2, emails)
-            #
+           
                 return render(request, 'One_bulk.html', {
                     'entered_name': entered_name,
                     'entered_email': entered_email,
@@ -399,7 +403,11 @@ def Excel_Process(request):
         else:
             print("0000000000000000")
             print(str(e) + "this is the errorllllllllllllllllllllllllllllllllllllll")
-
+            return render(request, 'One_bulk.html', {
+                'email': entered_email,
+                'type': 'One_bulk',
+                'alert': str(e)
+            })
 
 # def multiple_upload(request):
 #     if request.method == "POST":
