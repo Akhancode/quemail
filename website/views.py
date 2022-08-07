@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.core.mail import send_mail,EmailMessage,send_mass_mail
 import pandas as pd
+from email.mime.text import MIMEText
 entered_name = None;
 entered_email=None;
 entered_password=None;
@@ -10,10 +11,22 @@ entered_message=None;
 entered_ending=None;
 alert = None
 dataTuple = ()
+contact_email =None
+contact_name =None
+contact_body =None
 def printx():
     print('x')
+
+def contact_me(request):
+        return render(request, 'Products.html')
+
 def home(request):
     return render(request,'home.html',{'name':'Amjadkhan'})
+
+def products(request):
+    return render(request,'Products.html')
+def instruction(request):
+    return render(request,'Instruction.html')
 
 def One_bulk(request):
     global entered_name,entered_email,entered_password,entered_subject,entered_dear,entered_message,entered_ending,dataTuple,alert
@@ -21,7 +34,7 @@ def One_bulk(request):
     # on press submit
     if request.method == "POST":
         print("One bulk on passing Post form")
-        print(entered_name,entered_password,entered_message)
+        # print(entered_name,entered_password,entered_message)
         print(dataTuple)
         if entered_email and entered_password:
             content = "%s\n\n%s\n\n%s" % (entered_dear, entered_message, entered_ending)
@@ -178,7 +191,7 @@ def Excel_Process(request):
 
                 for v1, email in zip(var_1, emails):
                     t = (entered_subject,
-                         "%s\n\n%s\n\n%s" % (entered_dear, entered_message.replace('%variable_1', str(v1)), entered_ending),
+                         "%s\n\n%s\n\n%s" % (entered_dear, entered_message.replace('$var_1', str(v1)), entered_ending),
                          entered_email, [email])
                     dt = list(dataTuple)
                     dt.append(t)
@@ -204,12 +217,10 @@ def Excel_Process(request):
                     "var_count": var_count
 
                 })
-<<<<<<< HEAD
-            elif columns == 1 : # Two variable
-=======
+
             elif columns == 1 : # One variable
->>>>>>> origin/main
                 print("enterto def function")
+                str_match = list(filter(lambda x: 'EMAI'or'email'or'Email' in x, column_names))
                 str_match = list(filter(lambda x: 'EMAI'or'email'or'Email' in x, column_names))
                 email_col = str_match[0]
                 column_names.remove(email_col)
@@ -245,7 +256,7 @@ def Excel_Process(request):
 
 
             elif columns == 3:
-                str_match = list(filter(lambda x: 'EMAI' in x, column_names))
+                str_match = list(filter(lambda x: 'EMAI' or 'email' or 'Email' in x, column_names))
                 email_col = str_match[0]
                 print(column_names)
                 column_names.remove(email_col)

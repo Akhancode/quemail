@@ -66,87 +66,87 @@
 
                     <h3 class="section-title mb-0 ml-0">Automate - Mail</h3>
                 <div>
-                                    {% if type == "One_bulk" %}
-                                        <div class="dropdown d-inline-block show">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownVariableButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
-                                               Variable
-                                            </button>
+<!--                                    {% if type == "One_bulk" %}-->
+<!--                                        <div class="dropdown d-inline-block show">-->
+<!--                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownVariableButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">-->
+<!--                                               Variable-->
+<!--                                            </button>-->
 
 
-                                                <script>
+<!--                                                <script>-->
 
-                                                       function displayVarSelector(x) {
-                                                            var elem = document.getElementById("variable_data");
+<!--                                                       function displayVarSelector(x) {-->
+<!--                                                            var elem = document.getElementById("variable_data");-->
 
-                                                            if (elem){
-                                                                    elem.parentNode.removeChild(elem);
-                                                                }
-                                                            if (x==1) {
+<!--                                                            if (elem){-->
+<!--                                                                    elem.parentNode.removeChild(elem);-->
+<!--                                                                }-->
+<!--                                                            if (x==1) {-->
 
-                                                            document.getElementById("dropdownVariableButton").innerHTML = "One";
-                                                            console.log("documne")
-
-
-                                                              var newdiv = document.createElement('div');
-                                                                newdiv.id = "variable_data";
-                                                                newdiv.innerHTML = "<div class='col form-group'><input form='excel_form' type='text' class='form-control' placeholder='Variable 1' name='variable_1' > </div><br>";
-                                                                document.getElementById('variabe_row').appendChild(newdiv);
+<!--                                                            document.getElementById("dropdownVariableButton").innerHTML = "One";-->
+<!--                                                            console.log("documne")-->
 
 
-
-                                                            }
-
-                                                            else if (x==2) {
-                                                            document.getElementById("dropdownVariableButton").innerHTML = "Two";
-
-
-                                                            var newdiv = document.createElement('div');
-                                                                newdiv.id = "variable_data";
-                                                                newdiv.innerHTML = "<div class='form-row form-group'>"+
-                                                                "<div class='col form-group'>"+
-                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 1' name='variable_1'>"+
-                                                                "</div>"+
-                                                                "<div class='col form-group'>"+
-                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 2' name='variable_2'>"+
-                                                                "</div>"+
-                                                                "</div>"
-                                                                document.getElementById('variabe_row').appendChild(newdiv);
+<!--                                                              var newdiv = document.createElement('div');-->
+<!--                                                                newdiv.id = "variable_data";-->
+<!--                                                                newdiv.innerHTML = "<div class='col form-group'><input form='excel_form' type='text' class='form-control' placeholder='Variable 1' name='variable_1' > </div><br>";-->
+<!--                                                                document.getElementById('variabe_row').appendChild(newdiv);-->
 
 
-                                                            }
-                                                            else if (x==3) {
-                                                            document.getElementById("dropdownVariableButton").innerHTML = "Three";
-                                                            var newdiv = document.createElement('div');
-                                                                newdiv.id = "variable_data";
-                                                                newdiv.innerHTML = "<div class='form-row form-group'>"+
-                                                                "<div class='col form-group'>"+
-                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 1' name='variable_1'>"+
-                                                                "</div>"+
-                                                                "<div class='col form-group'>"+
-                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 2' name='variable_2'>"+
-                                                                "</div>"+
-                                                                "<div class='col form-group'>"+
-                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 3' name='variable_3'>"+
-                                                                "</div>"+
-                                                                "</div>"
-                                                                document.getElementById('variabe_row').appendChild(newdiv);
-                                                            }
-                                                            else {
-                                                            document.getElementById("dropdownVariableButton").innerHTML = "Variable";
-                                                            }
-                                                        }
-                                                    </script>
-                                             <div class="dropdown-menu " aria-labelledby="dropdownVariableButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
 
-                                                     <button class="dropdown-item" type="submit" name="variable"  href="#" value="One" onclick="displayVarSelector(1)">One</button>
-                                                     <button class="dropdown-item" type="submit" name="variable" href="#" value="Two" onclick="displayVarSelector(2)">Two</button>
-                                                     <button class="dropdown-item" type="submit" name="variable" href="#" value="Three" onclick="displayVarSelector(3)">Three</button>
+<!--                                                            }-->
 
-                                             </div>
+<!--                                                            else if (x==2) {-->
+<!--                                                            document.getElementById("dropdownVariableButton").innerHTML = "Two";-->
 
-                                 </div>
-                                    {% else %}
-                                    {% endif %}
+
+<!--                                                            var newdiv = document.createElement('div');-->
+<!--                                                                newdiv.id = "variable_data";-->
+<!--                                                                newdiv.innerHTML = "<div class='form-row form-group'>"+-->
+<!--                                                                "<div class='col form-group'>"+-->
+<!--                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 1' name='variable_1'>"+-->
+<!--                                                                "</div>"+-->
+<!--                                                                "<div class='col form-group'>"+-->
+<!--                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 2' name='variable_2'>"+-->
+<!--                                                                "</div>"+-->
+<!--                                                                "</div>"-->
+<!--                                                                document.getElementById('variabe_row').appendChild(newdiv);-->
+
+
+<!--                                                            }-->
+<!--                                                            else if (x==3) {-->
+<!--                                                            document.getElementById("dropdownVariableButton").innerHTML = "Three";-->
+<!--                                                            var newdiv = document.createElement('div');-->
+<!--                                                                newdiv.id = "variable_data";-->
+<!--                                                                newdiv.innerHTML = "<div class='form-row form-group'>"+-->
+<!--                                                                "<div class='col form-group'>"+-->
+<!--                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 1' name='variable_1'>"+-->
+<!--                                                                "</div>"+-->
+<!--                                                                "<div class='col form-group'>"+-->
+<!--                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 2' name='variable_2'>"+-->
+<!--                                                                "</div>"+-->
+<!--                                                                "<div class='col form-group'>"+-->
+<!--                                                                "<input form='excel_form' type='text' class='form-control' placeholder='Variable 3' name='variable_3'>"+-->
+<!--                                                                "</div>"+-->
+<!--                                                                "</div>"-->
+<!--                                                                document.getElementById('variabe_row').appendChild(newdiv);-->
+<!--                                                            }-->
+<!--                                                            else {-->
+<!--                                                            document.getElementById("dropdownVariableButton").innerHTML = "Variable";-->
+<!--                                                            }-->
+<!--                                                        }-->
+<!--                                                    </script>-->
+<!--                                             <div class="dropdown-menu " aria-labelledby="dropdownVariableButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">-->
+
+<!--                                                     <button class="dropdown-item" type="submit" name="variable"  href="#" value="One" onclick="displayVarSelector(1)">One</button>-->
+<!--                                                     <button class="dropdown-item" type="submit" name="variable" href="#" value="Two" onclick="displayVarSelector(2)">Two</button>-->
+<!--                                                     <button class="dropdown-item" type="submit" name="variable" href="#" value="Three" onclick="displayVarSelector(3)">Three</button>-->
+
+<!--                                             </div>-->
+
+<!--                                 </div>-->
+<!--                                    {% else %}-->
+<!--                                    {% endif %}-->
                                 <div class="dropdown d-inline-block show">
                                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
                                       {{type}}
@@ -169,7 +169,7 @@
                                  <div class="dropdown-menu " aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
                                          <a class="dropdown-item" type="radio" name="gender" href="Automate.html" value="Single" onclick="displayRadioValue(1)">Single</a>
                                          <a class="dropdown-item" type="radio" name="gender" href="{% url 'one_bulk' %}" value="One Bulk" onclick="displayRadioValue(2)">One Bulk</a>
-                                         <a class="dropdown-item" type="radio" name="gender" href="#" value="Custom Bulk" onclick="displayRadioValue(3)">Custom Bulk</a>
+<!--                                         <a class="dropdown-item" type="radio" name="gender" href="#" value="Custom Bulk" onclick="displayRadioValue(3)">Custom Bulk</a>-->
 
                                  </div>
 
